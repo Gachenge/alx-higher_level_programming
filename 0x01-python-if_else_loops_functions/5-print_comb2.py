@@ -2,5 +2,5 @@
 for i in range(100):
     if (i == 99):
         continue
-    print(f"{i:02d}, ", end='')
-print(f"{i}")
+    print("{:02d}, ".format(i), end='')
+print("{}".format(i))
