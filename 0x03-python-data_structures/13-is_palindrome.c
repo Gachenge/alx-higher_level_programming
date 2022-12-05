@@ -6,6 +6,8 @@ int is_palindrome(listint_t **head)
 	listint_t *temp = *head;
 	listint_t *current = *head;
 	listint_t *next = NULL;
+	listint_t *temp1 = NULL;
+
 	while (current)
 	{
 		next = current->next;
@@ -14,8 +16,8 @@ int is_palindrome(listint_t **head)
 		current = next;
 	}
 	*head = prev;
-	if (*head == temp)
+	temp1 = *head;
+	if (temp1->n == temp->n)
 		return (1);
-	else
-		return (0);
+	return (0);
 }
