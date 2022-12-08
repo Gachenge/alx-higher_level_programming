@@ -5,6 +5,8 @@ def roman_to_int(roman_string):
 
     if not roman_string:
         return None
+    if type(roman_string) != str:
+        return None
 
     for i in range(len(roman_string)):
         if (i != len(roman_string) - 1 and rom[roman_string[i]] <
