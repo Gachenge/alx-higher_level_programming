@@ -5,8 +5,3 @@
 class Square:
     """ the square"""
     pass
-
-
-s = Square()
-
-print(s)
