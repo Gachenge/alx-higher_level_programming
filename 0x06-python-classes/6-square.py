@@ -38,6 +38,7 @@ class Square:
 
     def area(self):
         return(pow(self.__size, 2))
+
     def my_print(self):
         if self.__size == 0:
             print()
@@ -45,7 +46,7 @@ class Square:
             print()
         for i in range(1, self.__size + 1):
             for j in range(self.__position[0]):
-                print(' ' , end='')
+                print(' ', end='')
             for k in range(1, self.__size + 1):
                 print('#', end='')
             print()
