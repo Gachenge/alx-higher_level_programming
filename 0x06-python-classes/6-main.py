@@ -18,4 +18,3 @@ print("--")
 
 my_square_4 = Square(0, (4, 2))
 my_square_4.my_print()
-

@@ -2,14 +2,16 @@
 
 """singly linked lists"""
 
+
 class Node:
 
     """define the data part"""
-
     def __init__(self, data, next_node=None):
-        """ define the data and 
+
+        """define the data and
         next_node: the next node
         """
+
         self.data = data
         self.next_node = next_node
 
@@ -51,7 +53,7 @@ class SinglyLinkedList:
         """
 
         new = Node(value)
-        if self.__head == None:
+        if self.__head is None:
             new.next_node = None
             self.__head = new
         elif self.__head.data > value:
