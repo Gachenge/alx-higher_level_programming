@@ -1,0 +1,27 @@
+text_indentation
+================
+
+Prototype: text_indentation(text)
+indent text
+text must be a string
+print the indented string
+
+>>> text = __import__('5-text_indentation').text_indentation
+>>> text("where are, you. going? to")
+where are, you.
+<BLANKLINE>
+ going?
+<BLANKLINE>
+ to
+
+>>> text(23)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text(" who?")
+ who?
+<BLANKLINE>
+
+>>> text(" and they are:")
+ and they are:
+<BLANKLINE>
