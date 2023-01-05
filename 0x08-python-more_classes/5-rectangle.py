@@ -52,16 +52,16 @@ class Rectangle:
             return 0
         return ((self.__width * 2) + (self.__height * 2))
 
-    def __str__(self):
-        st = ""
+    def pprint(self):
         if self.__width == 0 or self.__height == 0:
-            return st
-        for i in range(self.__height):
-            st += ('#' * self.__width)
-            if i < self.__height - 1:
-                st += '\n'
-        return st
+            return ("")
+        return ('\n'.join('#' * self.__width for _ in range(self.__height)))
+
+    def __str__(self):
+        return f"{self.pprint()}"
 
     def __repr__(self):
-        return ("Rectangle(" + str(self.__width)
-                + ", " + str(self.__height) + ")")
+        return ("Rectangle(" + str(self.__width) + ", "
+                + str(self.__height) + ")")
+    def __del__(self):
+        print("Bye rectangle...")
