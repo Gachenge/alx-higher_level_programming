@@ -35,6 +35,9 @@ class TestMaxInteger(unittest.TestCase):
         ls = [3, 5, 7, -4]
         self.assertEqual(maxi(ls), 7)
 
+    def test_string(self):
+        ls = ['cow', 'dog' , 'rat', 'fish']
+        self.assertEqual(maxi(ls), 'rat')
 
 if __name__ == '__main__':
     unittest.main()
