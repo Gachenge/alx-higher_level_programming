@@ -31,7 +31,7 @@ class TestMaxInteger(unittest.TestCase):
         ls = [3, 5 ,6 , 1, 9]
         self.assertEqual(maxi(ls), 9)
 
-    def test_neg(self):
+    def test_ineg(self):
         ls = [3, 5, 7, -4]
         self.assertEqual(maxi(ls), 7)
 
