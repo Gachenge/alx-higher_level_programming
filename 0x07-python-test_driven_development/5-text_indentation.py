@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 "print text with 2 new lines afte separators"
+
 
 def text_indentation(text):
     """Print text with new lines after seperator.

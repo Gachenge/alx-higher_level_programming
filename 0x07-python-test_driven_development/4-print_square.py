@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 " print a square"
+
 
 def print_square(size):
     """print a square using '#'
@@ -22,4 +22,3 @@ def print_square(size):
         for j in range(1, size):
             print('#', end='')
         print('#')
-
