@@ -44,3 +44,16 @@ TypeError: each row of m_b must be of the same size
 >>> mul([[1, 2, 3], [4, 5, 6]], [[1, 2, 3, 4], [4, 5, 6, 7]])
 Traceback (most recent call last):
 ValueError: m_a and m_b can't be multiplied
+
+>>> mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+
+>>> mul([[0, 0]], [[1, 2], [3, 4]])
+[[0, 0]]
+
+>>> mul([[1.2, 5.5, 6.2], [4.66, 12.3, -9.2]], [[5.0, 3.3], [-2.9, 4.4], [7.2, 4.4]])
+[[34.69, 55.44000000000001], [-78.61, 29.018000000000008]]
+
+>>> mul([[]], [])
+Traceback (most recent call last):
+ValueError: m_a can't be empty
