@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import numpy as np
 "numpy to install numpy"
+import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
