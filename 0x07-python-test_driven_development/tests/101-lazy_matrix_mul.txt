@@ -41,3 +41,7 @@ ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with
 >>> mul([[3, 2]], [[1, 5, 2], [3, 4]])
 Traceback (most recent call last):
 ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+
+>>> mul([[1, 2, 3], [1, 2]])
+Traceback (most recent call last):
+TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
