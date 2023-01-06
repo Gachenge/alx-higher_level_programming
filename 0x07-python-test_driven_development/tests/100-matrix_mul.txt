@@ -57,3 +57,22 @@ ValueError: m_a and m_b can't be multiplied
 >>> mul([[]], [])
 Traceback (most recent call last):
 ValueError: m_a can't be empty
+
+>>> mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+[[19, 22], [43, 50]]
+
+>>> mul([[5, 6], [7, 8]], "Holberton")
+Traceback (most recent call last):
+TypeError: m_b must be a list
+
+>>> mul([[1, 2], [3, 4]], [1, 2])
+Traceback (most recent call last):
+TypeError: m_b must be a list of lists
+
+>>> mul([[1, 2]], [['3', 2], [4, 5]])
+Traceback (most recent call last):
+TypeError: m_b should contain only integers or floats
+
+>>> mul([[1, 2, 3], [3, 4]], [[1, 2, 3], [3, 4, 5]])
+Traceback (most recent call last):
+TypeError: each row of m_a must be of the same size
