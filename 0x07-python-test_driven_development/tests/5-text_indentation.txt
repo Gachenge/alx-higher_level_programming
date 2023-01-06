@@ -10,9 +10,9 @@ print the indented string
 >>> text("where are, you. going? to")
 where are, you.
 <BLANKLINE>
- going?
+going?
 <BLANKLINE>
- to
+to
 
 >>> text(23)
 Traceback (most recent call last):
@@ -25,3 +25,7 @@ TypeError: text must be a string
 >>> text(" and they are:")
  and they are:
 <BLANKLINE>
+
+>>> text()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
