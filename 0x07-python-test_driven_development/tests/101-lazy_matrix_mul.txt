@@ -45,3 +45,11 @@ ValueError: setting an array element with a sequence. The requested array has an
 >>> mul([[1, 2, 3], [1, 2]])
 Traceback (most recent call last):
 TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+>>> mul([[1.2, 5.5, 6.2], [4.66, 12.3, -9.2]], [[5.0, 3.3], [-2.9, 4.4], [7.2, 4.4]])
+array([[ 34.69 ,  55.44 ],
+       [-78.61 ,  29.018]])
+
+>>> mul([[5, 6], [7, 8]], [[5, "6"], [7, 8]])
+Traceback (most recent call last):
+numpy.core._exceptions._UFuncNoLoopError: ufunc 'matmul' did not contain a loop with signature matching types (dtype('int64'), dtype('<U21')) -> None
