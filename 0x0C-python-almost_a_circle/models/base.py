@@ -2,8 +2,11 @@
 """create the base of all other classes in project"""
 import json
 
+
 class Base:
-    """all other classes in the project will be based on this"""
+    """all other classes in the project will be based on this
+    this is what all other instances are based
+    """
 
     __nb_objects = 0
 
@@ -75,4 +78,4 @@ class Base:
                 list_dicts = Base.from_json_string(f.read())
                 return [cls.create(**k) for k in list_dicts]
         except:
-            return "[]"
+            return []
