@@ -8,7 +8,7 @@ from models.square import Square
 
 
 class TestBase(unittest.TestCase):
-    """test cases"""
+    """test cases parent class instantiation"""
 
     def test_NoArg(self):
         a = Base()
@@ -34,7 +34,7 @@ class TestBase(unittest.TestCase):
 
 
 class TestJson(unittest.TestCase):
-    """test for json"""
+    """test for json string dictionary"""
 
     def test_noType(self):
         a = Rectangle(4, 5)
@@ -79,6 +79,23 @@ class TestJson(unittest.TestCase):
         with open("Square.json", 'r') as f:
             self.assertEqual(39, len(f.read()))
 
+class TestOthr(unittest.TestCase):
+    """adding other tests"""
+    def test_float(self):
+        self.assertEqual(3.45, Base(3.45).id)
 
+    def test_str(self):
+        self.assertEqual('cow', Base('cow').id)
+
+    def test_dict(self):
+        self.assertEqual({'a': 4, 'b': 7}, Base({'a': 4, 'b': 7}).id)
+
+    def test_many(self):
+        with self.assertRaises(TypeError):
+            Base(4, 6, 3, 6)
+
+    def test_att(self):
+        with self.assertRaises(AttributeError):
+            print(Base(3).__nb_instances)
 if __name__ == '__main__':
     unittest.main()
