@@ -79,6 +79,7 @@ class TestJson(unittest.TestCase):
         with open("Square.json", 'r') as f:
             self.assertEqual(39, len(f.read()))
 
+
 class TestOthr(unittest.TestCase):
     """adding other tests"""
     def test_float(self):
@@ -97,5 +98,7 @@ class TestOthr(unittest.TestCase):
     def test_att(self):
         with self.assertRaises(AttributeError):
             print(Base(3).__nb_instances)
+
+
 if __name__ == '__main__':
     unittest.main()
