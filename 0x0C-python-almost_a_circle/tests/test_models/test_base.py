@@ -79,5 +79,6 @@ class TestJson(unittest.TestCase):
         with open("Square.json", 'r') as f:
             self.assertEqual(39, len(f.read()))
 
+
 if __name__ == '__main__':
     unittest.main()

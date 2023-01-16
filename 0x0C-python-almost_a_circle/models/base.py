@@ -6,13 +6,16 @@ import json
 class Base:
     """all other classes in the project will be based on this
     this is what all other instances are based
-    """
+    Attributes:
+        __nb_objects: count the instances
+        """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
         """initialise the base
-        id: is an int
+        Args:
+            id: is an int
         """
         if id is not None:
             self.id = id
@@ -24,19 +27,24 @@ class Base:
     def to_json_string(list_dictionaries):
         """json string representation of list_dictionaries
         if list_dictionaries is none or empty return string"[]"
-        """
+        Args:
+            list_dictionaries: a list of dictionaries
+            """
         if list_dictionaries == [] or list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
+
     @classmethod
     def save_to_file(cls, list_objs):
         """if list_obj is none save an empty list
         filename must be classname.jason
         overwrite the file if it already exists
+        Args:
+            list_objs: list of base instances
         """
         filename = cls.__name__ + ".json"
 
-        with open (filename, 'w') as f:
+        with open(filename, 'w') as f:
             if list_objs is None:
                 f.write('[]')
             else:
@@ -47,6 +55,10 @@ class Base:
     def from_json_string(json_string):
         """json string is a list of dictionaries
         if json_string is none or empty return an empty list
+        Args:
+            json_string: string represantation
+        Returns:
+            python list
         """
 
         if json_string is None or json_string == []:
@@ -77,5 +89,5 @@ class Base:
             with open(filename, "r") as f:
                 list_dicts = Base.from_json_string(f.read())
                 return [cls.create(**k) for k in list_dicts]
-        except:
+        except IOError:
             return []
