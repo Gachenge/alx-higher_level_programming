@@ -26,7 +26,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """get the width"""
+        """get the width of the rectangle"""
         return (self.__width)
 
     @width.setter
@@ -40,7 +40,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """get the width"""
+        """get the height of the rectangle"""
         return (self.__height)
 
     @height.setter
@@ -54,7 +54,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """get x"""
+        """get the x coordinate"""
         return (self.__x)
 
     @x.setter
@@ -67,7 +67,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """get y"""
+        """get the y coordinate"""
         return (self.__y)
 
     @y.setter
@@ -79,9 +79,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """return the are of the rectangle"""
         return (self.width * self.height)
 
     def display(self):
+        """print the rectangle, using the '#'"""
         if self.height == 0 or self.width == 0:
             print("")
             return
@@ -94,11 +96,13 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """the string and the print representation"""
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y,
                         self.width, self.height))
 
     def update(self, *args, **kwargs):
+        """update the attributes of the rectangle"""
         x = 0
         if args and len(args) != 0:
             for arg in args:
@@ -133,6 +137,7 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        """the dictionary representation of the rectangle"""
         return {
                 "id": self.id,
                 "width": self.width,
