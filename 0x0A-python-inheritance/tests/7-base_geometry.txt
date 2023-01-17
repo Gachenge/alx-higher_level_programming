@@ -10,41 +10,51 @@ raises TypeError and ValueError
 Traceback (most recent call last):
 TypeError: cow must be an integer
 
->>> bg = base()
 >>> bg.integer_validator('who', [])
 Traceback (most recent call last):
 TypeError: who must be an integer
 
->>> bg = base()
 >>> bg.integer_validator('id', -3)
 Traceback (most recent call last):
 ValueError: id must be greater than 0
 
->>> bg = base()
 >>> bg.integer_validator('age', 45.8)
 Traceback (most recent call last):
 TypeError: age must be an integer
 
->>> bg = base()
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
->>> bg = base()
 >>> bg.integer_validator('name')
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
->>> bg = base()
 >>> bg.integer_validator(None)
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
->>> bg = base()
 >>> bg.integer_validator('num', int('inf'))
 Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: 'inf'
 
->>> bg = base()
 >>> type(bg)
 <class '7-base_geometry.BaseGeometry'>
+
+>>> bg.integer_validator("{'id': 1}", (2, 3))
+Traceback (most recent call last):
+TypeError: {'id': 1} must be an integer
+
+>>> bg.integer_validator('num', 0)
+Traceback (most recent call last):
+ValueError: num must be greater than 0
+
+>>> bg.integer_validator('age', None)
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> bg.integer_validator('me', {6, 7})
+Traceback (most recent call last):
+TypeError: me must be an integer
+
+>>> bg.integer_validator('good', 7)
