@@ -38,3 +38,19 @@ print a sorted list
 >>> mylist = MyList()
 >>> mylist.print_sorted()
 []
+
+>>> mylist = MyList()
+>>> mylist.append('hello')
+>>> mylist.append('who')
+>>> mylist.append('are')
+>>> mylist.append('you')
+>>> mylist.print_sorted()
+['are', 'hello', 'who', 'you']
+
+>>> mylist = MyList()
+>>> mylist.append(2.45)
+>>> mylist.append(4.67)
+>>> mylist.append(3.68)
+>>> mylist.append(1.12)
+>>> mylist.print_sorted()
+[1.12, 2.45, 3.68, 4.67]
