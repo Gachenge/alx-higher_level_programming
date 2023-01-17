@@ -110,6 +110,51 @@ class TestOther(unittest.TestCase):
         a = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual('[Rectangle] (5) 3/4 - 1/2', str(a))
 
+    def test_update(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        a.update(6, 7, 8, 9, 10)
+        self.assertEqual(6, a.id)
+
+    def test_update(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        a.update(89)
+        self.assertEqual(89, a.id)
+
+    def test_update2(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        a.update(89, 1)
+        self.assertEqual(89, a.id)
+
+    def test_update3(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        a.update(89, 1, 2)
+        self.assertEqual(2, a.area())
+
+    def test_updateN(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        a.update()
+        self.assertEqual(5, a.id)
+
+    def test_updatekw(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        a.update(**{'id': 89})
+        self.assertEqual(89, a.id)
+
+    def test_updkw(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        a.update(**{'id': 89, 'width': 5})
+        self.assertEqual(10, a.area())
+
+    def test_updakw(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        a.update(**{'id': 89, 'width': 7, 'height': 9})
+        self.assertEqual(63, a.area())
+
+    def test_updatkw(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        a.update(**{'id': 89, 'width': 7, 'height': 9, 'x': 4, 'y': 5})
+        self.assertEqual(4, a.x)
+
 
 if __name__ == '__main__':
     unittest.main()
