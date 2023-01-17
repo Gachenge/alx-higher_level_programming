@@ -1,0 +1,40 @@
+mylist
+======
+
+Pototype: def print_sorted(self)
+print a sorted list
+
+>>> MyList = __import__('1-my_list').MyList
+>>> mylist = MyList()
+>>> mylist.append(-3)
+>>> mylist.append(3)
+>>> mylist.append(6)
+>>> mylist.append(0)
+>>> mylist.print_sorted()
+[-3, 0, 3, 6]
+
+>>> mylist = MyList()
+>>> mylist.append(2)
+>>> mylist.print_sorted()
+[2]
+
+>>> mylist = MyList()
+>>> mylist.append(-4)
+>>> mylist.append(-6)
+>>> mylist.append(-7)
+>>> mylist.append(-1)
+>>> mylist.print_sorted()
+[-7, -6, -4, -1]
+
+>>> mylist = MyList()
+>>> mylist.append(4)
+>>> mylist.append(7)
+>>> mylist.append(2)
+>>> mylist.append(0)
+>>> mylist.append(5)
+>>> mylist.print_sorted()
+[0, 2, 4, 5, 7]
+
+>>> mylist = MyList()
+>>> mylist.print_sorted()
+[]
