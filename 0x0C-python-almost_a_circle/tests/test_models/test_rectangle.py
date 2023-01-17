@@ -79,5 +79,37 @@ class TestArea(unittest.TestCase):
         self.assertEqual(89999999981000000001, a.area())
 
 
+class TestOther(unittest.TestCase):
+    """test everything else"""
+
+    def test_simp(self):
+        a = Rectangle(1, 2)
+        self.assertEqual(2, a.area())
+
+    def test_thrArg(self):
+        a = Rectangle(1, 2, 3)
+        self.assertIsInstance(a, Base)
+
+    def test_fouArg(self):
+        a = Rectangle(1, 2, 3, 4)
+        self.assertIsInstance(a, Base)
+
+    def test_fivArg(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        self.assertIsInstance(a, Base)
+
+    def test_neg(self):
+        with self.assertRaises(ValueError):
+            Rectangle(1, -2)
+
+    def test_zer(self):
+        with self.assertRaises(ValueError):
+            Rectangle(0, 2)
+
+    def test_stringRep(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual('[Rectangle] (5) 3/4 - 1/2', str(a))
+
+
 if __name__ == '__main__':
     unittest.main()

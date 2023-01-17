@@ -99,6 +99,16 @@ class TestOthr(unittest.TestCase):
         with self.assertRaises(AttributeError):
             print(Base(3).__nb_instances)
 
+    def test_fromjsonNone(self):
+        self.assertEqual([], Base.from_json_string(None))
+
+    def test_fromjsonEmpt(self):
+        self.assertEqual([], Base.from_json_string('[]'))
+
+    def test_dictjson(self):
+        with self.assertRaises(TypeError):
+            print(Base.from_json_string([{'id': 89}]))
+
 
 if __name__ == '__main__':
     unittest.main()
