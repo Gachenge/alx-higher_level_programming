@@ -57,4 +57,14 @@ TypeError: age must be an integer
 Traceback (most recent call last):
 TypeError: me must be an integer
 
->>> bg.integer_validator('good', 7)
+>>> bg.integer_validator('fn', [3, 4, 5])
+Traceback (most recent call last):
+TypeError: fn must be an integer
+
+>>> bg.integer_validator('nm', 'dff')
+Traceback (most recent call last):
+TypeError: nm must be an integer
+
+>>> bg.integer_validator('id', True)
+Traceback (most recent call last):
+TypeError: id must be an integer
