@@ -56,6 +56,11 @@ class TestJson(unittest.TestCase):
         with open("Square.json", "r") as f:
             self.assertEqual('[]', f.read())
 
+    def test_nn(self):
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", 'r') as f:
+            self.assertEqual('[]', f.read())
+
     def test_gdi(self):
         a = Rectangle(3, 5, 6, 8, 7)
         Rectangle.save_to_file([a])
@@ -108,6 +113,41 @@ class TestOthr(unittest.TestCase):
     def test_dictjson(self):
         with self.assertRaises(TypeError):
             print(Base.from_json_string([{'id': 89}]))
+
+    def test_crt(self):
+        with self.assertRaises(TypeError):
+            a = Rectangle(89)
+            b = to_dictionary()
+            Rectangle.create(**b)
+
+    def test_crt1(self):
+        a = Rectangle(89, 4)
+        b = a.to_dictionary()
+        c = Rectangle.create(**b)
+        self.assertEqual(16, c.id)
+
+    def test_crt2(self):
+        a = Rectangle(4, 5, 6)
+        b = a.to_dictionary()
+        c = Rectangle.create(**b)
+        self.assertEqual(20, c.area())
+
+    def test_crt3(self):
+        a = Rectangle(4, 5, 6, 7, 8)
+        b = a.to_dictionary()
+        c = Rectangle.create(**b)
+        self.assertEqual(7, c.y)
+
+    def test_ldfl(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        b = Rectangle(6, 7, 8, 9, 10)
+        Rectangle.save_to_file([a, b])
+        lts = Rectangle.load_from_file()
+        self.assertEqual(str(a), str(lts[0]))
+
+    def test_empfl(self):
+        with self.assertRaises(TypeError):
+            Rectangle.load_from_file([], 1)
 
 
 if __name__ == '__main__':

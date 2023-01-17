@@ -59,6 +59,90 @@ class TestCaseSquare(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square(8, 6, float('nan'))
 
+class TestOthe(unittest.TestCase):
+    """other tests"""
+
+    def test_sqtw(self):
+        a = Square(1, 2)
+        self.assertEqual(1, a.area())
+
+    def test_frag(self):
+        a = Square(1, 2, 3, 4)
+        self.assertEqual(4, a.id)
+
+    def test_updt(self):
+        a = Square(5, 4, 3, 6)
+        a.update()
+        self.assertEqual(6, a.id)
+
+    def test_updt1(self):
+        a = Square(6, 7, 8, 9)
+        a.update(89)
+        self.assertEqual(89, a.id)
+
+    def test_updt2(self):
+        a = Square(1, 2, 3, 4)
+        a.update(89, 6)
+        self.assertEqual(6, a.size)
+
+    def test_updt3(self):
+        a = Square(1, 2, 3, 4)
+        a.update(89, 1, 5)
+        self.assertEqual(5, a.x)
+
+    def test_updt4(self):
+        a = Square(1, 2, 3, 4)
+        a.update(7, 8, 9, 10)
+        self.assertEqual(10, a.y)
+
+    def test_upd(self):
+        a = Square(4, 5, 6, 7)
+        a.update(**{'id': 9})
+        self.assertEqual(9, a.id)
+
+    def test_upd1(self):
+        a = Square(5, 6, 7, 8)
+        a.update(**{'id': 3, 'size': 4})
+        self.assertEqual(16, a.area())
+
+    def test_upd2(self):
+        a = Square(1, 2, 3, 4)
+        a.update(**{'id': 5, 'size': 6, 'x': 7})
+        self.assertEqual(7, a.x)
+
+    def test_upd3(self):
+        a = Square(1, 2, 3, 4)
+        a.update(**{'id': 5, 'size': 6, 'x': 7, 'y': 8})
+        self.assertEqual(8, a.y)
+
+    def test_crt(self):
+        a = Square.create(**{'id': 4})
+        self.assertEqual(4, a.id)
+
+    def test_crt1(self):
+        a = Square.create(**{'id': 5, 'size': 8})
+        self.assertEqual(64, a.area())
+
+    def test_crt2(self):
+        a = Square.create(**{'id': 7, 'size': 9, 'x': 8})
+        self.assertEqual(8, a.x)
+
+    def test_crt3(self):
+        a = Square.create(**{'id': 1, 'size': 2, 'x': 3, 'y': 4})
+        self.assertEqual(4, a.y)
+
+    def test_crt4(self):
+        with self.assertRaises(TypeError):
+            Square.create({})
+
+    def test_ldfil(self):
+        with self.assertRaises(TypeError):
+            Square.load_from_file([], 1)
+
+    def test_str(self):
+        a = Square(4)
+        self.assertEqual('[Square] (10) 0/0 - 4', str(a))
+
 
 if __name__ == '__main__':
     unittest.main()
