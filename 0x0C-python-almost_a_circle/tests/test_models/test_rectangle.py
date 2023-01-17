@@ -155,6 +155,22 @@ class TestOther(unittest.TestCase):
         a.update(**{'id': 89, 'width': 7, 'height': 9, 'x': 4, 'y': 5})
         self.assertEqual(4, a.x)
 
+    def test_crt(self):
+        a = Rectangle.create(**{'id': 89})
+        self.assertEqual(89, a.id)
 
-if __name__ == '__main__':
-    unittest.main()
+    def test_crt1(self):
+        a = Rectangle.create(**{'id': 5, 'width': 7})
+        self.assertEqual(7, a.width)
+
+    def test_crt2(self):
+        a = Rectangle(**{'id': 4, 'width': 3, 'height': 8})
+        self.assertEqual(24, a.area())
+
+    def test_crt3(self):
+        a =Rectangle(**{'id': 8, 'width': 6, 'height': 19, 'x': 4})
+        self.assertEqual(4, a.x)
+
+    def test_crt4(self):
+        a = Rectangle(**{'id': 3, 'width': 9, 'height': 18, 'x': 2, 'y': 4})
+        self.assertEqual(4, a.y)

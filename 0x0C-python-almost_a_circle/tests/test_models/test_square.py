@@ -139,5 +139,10 @@ class TestOthe(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square.load_from_file([], 1)
 
+    def test_string(self):
+        a = Square(7)
+        self.assertEqual('[Square] ({}) 0/0 - {}'.format(a.id, a.size), str(a))
+
+
 if __name__ == '__main__':
     unittest.main()
