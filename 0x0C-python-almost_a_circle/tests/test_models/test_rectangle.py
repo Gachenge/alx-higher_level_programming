@@ -174,3 +174,14 @@ class TestOther(unittest.TestCase):
     def test_crt4(self):
         a = Rectangle(**{'id': 3, 'width': 9, 'height': 18, 'x': 2, 'y': 4})
         self.assertEqual(4, a.y)
+
+    def test_rect1(self):
+        a = Rectangle(1, 2)
+        self.assertEqual(1, a.width)
+
+    def test_rect2(self):
+        a= Rectangle(1, 2, 3)
+        self.assertEqual(3, a.x)
+
+if __name__ == '__main__':
+    unittest.main()
