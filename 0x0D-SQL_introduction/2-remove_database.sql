@@ -1,2 +1,2 @@
---remove database if exists
-DROP DATABASE IF EXISTS 'hbtn_oc_0';
+#remove database if exists
+DROP DATABASE IF EXISTS `hbtn_0c_0`;
