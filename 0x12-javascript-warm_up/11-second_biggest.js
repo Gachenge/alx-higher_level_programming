@@ -6,7 +6,7 @@ function secbig (arr) {
   let max = arr[0];
   let sec = arr[0];
 
-  for (let i = 0; i < arr.length - 1; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] > max) {
       sec = max;
       max = arr[i];
