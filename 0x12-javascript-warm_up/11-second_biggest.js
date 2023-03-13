@@ -9,7 +9,7 @@ function secbig (arr) {
     if (myVar < arr[i]) {
       yoVar = myVar;
       myVar = arr[i];
-    } else if (arr[i] > yoVar && arr[i] != myVar) {
+    } else if (arr[i] > yoVar && arr[i] !== myVar) {
       yoVar = arr[i];
     }
   }
