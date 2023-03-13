@@ -4,7 +4,7 @@
 
 const myVar = Math.floor(process.argv[2]);
 let str = '';
-if (!myVar) {
+if (isNaN(myVar)) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < myVar; i++) {
