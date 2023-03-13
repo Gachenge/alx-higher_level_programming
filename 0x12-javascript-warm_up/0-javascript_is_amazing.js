@@ -2,4 +2,5 @@
 
 // just print how amazing
 
-console.log('JavaScript is amazing');
+const myVar = 'Javascript is amazing';
+console.log(myVar);

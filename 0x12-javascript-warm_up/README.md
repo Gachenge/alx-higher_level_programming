@@ -1,0 +1,1 @@
+Starting on Javascript variables, loops, conditions and data structures
