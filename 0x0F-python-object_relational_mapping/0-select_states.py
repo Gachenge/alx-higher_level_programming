@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-#print all states in a database
+# print all states in a database
 
 import sys
 import MySQLdb

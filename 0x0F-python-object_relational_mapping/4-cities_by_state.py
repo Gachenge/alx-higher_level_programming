@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-#list all cities from database
+# list all cities from database
 
 import sys
 import MySQLdb
@@ -12,4 +12,4 @@ if __name__ == '__main__':
           as `c` INNER JOIN `states` as `s` ON `c`.`state_id` = `s`.`id` \
               ORDER BY `c`.`id`")
     for city in cursor.fetchall():
-        print (city)
+        print(city)
