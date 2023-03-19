@@ -12,6 +12,7 @@ from sqlalchemy import Column, String, Integer
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     inherits from Base
@@ -20,7 +21,8 @@ class State(Base):
         id: unique integer, can't be null and is primary key
         name: string with max 123 char and can't be null
     """
+
     __tablename__ = "states"
-    
+
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
