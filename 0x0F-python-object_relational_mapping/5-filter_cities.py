@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 take in argument state and output cities in that state
+print and order by id
 """
 
 import sys
