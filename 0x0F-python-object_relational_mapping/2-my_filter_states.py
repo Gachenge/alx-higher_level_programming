@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
-# filter states starting with N
-
+"""
+    filter and print out all states starting with 'N'
+"""
 import sys
 import MySQLdb
 
