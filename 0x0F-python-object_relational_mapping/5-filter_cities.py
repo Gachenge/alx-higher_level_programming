@@ -13,7 +13,7 @@ if __name__ == "__main__":
     stat = []
     cur.execute("SELECT * FROM cities\
         JOIN states ON cities.state_id = states.id\
-                         ORDER BY cities.id")
+                         ORDER BY cities.id ASC")
     for city in cur.fetchall():
         if city[4] == sys.argv[4]:
             stat.append(city[2])
