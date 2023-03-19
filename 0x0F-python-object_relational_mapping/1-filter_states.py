@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 # filter states starting with N
+# order by state id
+
 import sys
 import MySQLdb
 
