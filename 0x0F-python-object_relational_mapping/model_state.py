@@ -12,7 +12,7 @@ from sqlalchemy import Column, String, Integer
 
 Base = declarative_base()
 
-class State:
+class State(Base):
     """
     inherits from Base
     table name is states
