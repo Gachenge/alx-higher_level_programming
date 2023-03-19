@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 # print all states in a database all arguments passed
 # ./0-select_states.py<username, password, database name>
 
