@@ -14,7 +14,7 @@ if __name__ == "__main__":
     you must use sqlalchemy search and destroy
     """
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]), echo=False)
     Session = sessionmaker(bind=engine)
     session = Session()
 
