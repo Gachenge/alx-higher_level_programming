@@ -3,8 +3,8 @@
 const list = require('./100-data').list;
 
 const nlist = list.map(myFunction);
-function myFunction(value, index, array){
-    return value * index;
+function myFunction (value, index, array) {
+  return value * index;
 }
 console.log(list);
 console.log(nlist);
