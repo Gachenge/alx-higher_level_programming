@@ -1,0 +1,1 @@
+setting up the network bash and curl
