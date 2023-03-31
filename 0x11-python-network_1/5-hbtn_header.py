@@ -8,6 +8,5 @@ from sys import argv
 
 if __name__ == "__main__":
     request = requests.get(argv[1])
-    html = request.headers['X-Request-Id']
-
-    print(html)
+    html = dict(request.headers)
+    print(html.get('X-Request-Id'))
