@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""login to github using github api"""
 import requests
 from sys import argv
-"""login to github using github api"""
 
 if __name__ == "__main__":
     request = requests.get('https://api.github.com/user',

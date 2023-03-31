@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""sends request t url and displays value of x-request-id"""
 import requests
 from sys import argv
-"""sends request t url and displays value of x-request-id"""
 
 
 if __name__ == "__main__":

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from sys import argv
-import requests
 """takes a letter and sends a post request
 with the letter as parameter"""
+from sys import argv
+import requests
 
 
 if __name__ == "__main__":

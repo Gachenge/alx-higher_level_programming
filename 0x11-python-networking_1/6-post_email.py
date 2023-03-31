@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""takes email as parameter and posts it then print response"""
 from sys import argv
 import requests
-"""takes email as parameter and posts it then print response"""
 
 
 if __name__ == "__main__":

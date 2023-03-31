@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import requests
 """script that fetches from url must use requests package"""
+import requests
+
 
 if __name__ == "__main__":
     request = requests.get("https://alx-intranet.hbtn.io/status")

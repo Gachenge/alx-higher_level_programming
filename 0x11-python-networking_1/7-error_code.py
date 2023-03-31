@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""if the error code is greater than or equal to 400"""
 from sys import argv
 import requests
-"""if the error code is greater than or equal to 400"""
 
 
 if __name__ == "__main__":

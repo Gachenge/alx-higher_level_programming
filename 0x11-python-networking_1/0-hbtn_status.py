@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-# fetches url alx status
+"""access the html document, its type"""
 from urllib import request
 
-"""access the html document, its type"""
 
 if __name__ == "__main__":
     with request.urlopen("https://alx-intranet.hbtn.io/status") as response:
