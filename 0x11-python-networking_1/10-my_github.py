@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""login to github using github api"""
+"""login to github using github api
+and print my user id
+"""
 import requests
 from sys import argv
 

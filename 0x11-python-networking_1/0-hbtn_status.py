@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""access the html document, its type"""
+"""access the html document, its type
+use urllib
+"""
 from urllib import request
 
 

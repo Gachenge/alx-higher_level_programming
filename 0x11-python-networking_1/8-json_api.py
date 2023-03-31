@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """takes a letter and sends a post request
-with the letter as parameter"""
+with the letter as parameter
+"""
 from sys import argv
 import requests
 

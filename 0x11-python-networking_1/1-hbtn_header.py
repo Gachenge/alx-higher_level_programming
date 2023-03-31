@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""""access url headers, the x-request-id value fro the key"""
+""""access url headers, the x-request-id 
+value from the key
+"""
 from urllib.request import urlopen
 from sys import argv
 

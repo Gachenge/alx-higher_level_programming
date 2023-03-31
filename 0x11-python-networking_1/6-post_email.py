@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""takes email as parameter and posts it then print response"""
+"""takes email as parameter and 
+posts it then print response
+"""
 from sys import argv
+
 import requests
 
 

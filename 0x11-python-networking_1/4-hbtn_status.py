@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""script that fetches from url must use requests package"""
+"""script that fetches from url
+must use requests package
+"""
 import requests
 
 

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""sends post email and displays the body of the response"""
+"""sends post email and displays the
+body of the response
+"""
 from sys import argv
 from urllib.parse import urlencode
 from urllib.request import Request

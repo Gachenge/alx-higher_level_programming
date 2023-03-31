@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""script that sends a request and displays the body of the response"""
+"""script that sends a request and displays
+the body of the response
+"""
 from urllib.error import HTTPError
 from sys import argv
 from urllib import request
