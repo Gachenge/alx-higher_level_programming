@@ -12,5 +12,5 @@ if __name__ == "__main__":
     if (request.status_code == 200):
         request_json = request.json()[:10]
         for commit in request_json:
-            name = commit['commit']['author']['name']
+            name = commit.get("commit").get("author").get("name")
             print("{}: {}".format(commit.get('sha'), name))
