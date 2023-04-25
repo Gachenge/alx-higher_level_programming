@@ -14,7 +14,7 @@ request(url, function (error, response, body) {
   const data = JSON.parse(body).results;
   data.forEach(movie => {
     movie.characters.forEach((character) => {
-      if (character.includes('18')) {
+      if (character.endsWith('18/')) {
         count += 1;
       }
     });
