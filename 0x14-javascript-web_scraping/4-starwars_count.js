@@ -8,15 +8,16 @@ const url = 'https://swapi-api.alx-tools.com/api/films';
 let count = 0;
 
 request(url, function (error, response, body) {
-  if (!error) {
-    const data = JSON.parse(body).results;
-    data.forEach(movie => {
-      movie.characters.forEach((character) => {
-        if (character.includes('18')) {
-          count += 1;
-        }
-      });
-    });
+  if (error) {
+    console.log(error);
   }
+  const data = JSON.parse(body).results;
+  data.forEach(movie => {
+    movie.characters.forEach((character) => {
+      if (character.includes('18')) {
+        count += 1;
+      }
+    });
+  });
   console.log(count);
 });
