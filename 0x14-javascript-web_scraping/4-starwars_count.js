@@ -7,7 +7,7 @@ const request = require('request');
 const url = 'https://swapi-api.alx-tools.com/api/films';
 let count = 0;
 
-request(url, (error, response, body) => {
+request(url, function (error, response, body) {
   if (!error) {
     const data = JSON.parse(body).results;
     data.forEach(movie => {
