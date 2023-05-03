@@ -1,4 +1,4 @@
 const mdiv = $('#update_header');
-mdiv.click(function() {
-    $("header").text("New Header!!!")
+mdiv.click(function () {
+  $('header').text('New Header!!!');
 });
